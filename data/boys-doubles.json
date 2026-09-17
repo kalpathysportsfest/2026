@@ -28,8 +28,8 @@
         "Thanmay & Rishikesh"
       ],
       "matches": [
-        { "id": "BD-R1-M1", "a": "Sreehari & Sidharth", "b": "Thanmay & Rishikesh", "scoreA": 15, "scoreB": 10 },
-        { "id": "BD-R1-M2", "a": "Subru & Aayush", "b": "Sriniketh. S & Viresh", "scoreA": 12, "scoreB": 15 },
+        { "id": "BD-R1-M1", "a": "Sreehari & Sidharth", "b": "Thanmay & Rishikesh", "scoreA": null, "scoreB": null },
+        { "id": "BD-R1-M2", "a": "Subru & Aayush", "b": "Sriniketh. S & Viresh", "scoreA": null, "scoreB": null },
         { "id": "BD-R2-M1", "a": "HARIDATH P & Vishnudev", "b": "Thanmay & Rishikesh", "scoreA": null, "scoreB": null },
         { "id": "BD-R2-M2", "a": "Sreehari & Sidharth", "b": "Subru & Aayush", "scoreA": null, "scoreB": null },
         { "id": "BD-R3-M1", "a": "HARIDATH P & Vishnudev", "b": "Sriniketh. S & Viresh", "scoreA": null, "scoreB": null },
