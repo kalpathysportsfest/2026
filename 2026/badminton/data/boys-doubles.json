@@ -32,8 +32,8 @@
           "id": "BD-R1-M1",
           "a": "Sreehari & Sidharth",
           "b": "Thanmay & Rishikesh",
-          "scoreA": null,
-          "scoreB": null
+          "scoreA": 15,
+          "scoreB": 10
         },
         {
           "id": "BD-R1-M2",
