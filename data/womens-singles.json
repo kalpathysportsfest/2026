@@ -18,10 +18,10 @@
     {
       "name": "Round 1",
       "matches": [
-        { "id": "R1-M1", "a": "Aneesha V P", "b": "Subhalakshmy C G", "scoreA": 15, "scoreB": 8 },
-        { "id": "R1-M2", "a": "Jayashree PK", "b": "Gowri Subramanian", "scoreA": 11, "scoreB": 15 },
-        { "id": "R1-M3", "a": "Sri Dhanya", "b": "Sruthi M B", "scoreA": 15, "scoreB": 13 },
-        { "id": "R1-M4", "a": "Rugmini Devi", "b": "Gayathri Paramesha", "scoreA": 9, "scoreB": 15 },
+        { "id": "R1-M1", "a": "Aneesha V P", "b": "Subhalakshmy C G", "scoreA": null, "scoreB": null },
+        { "id": "R1-M2", "a": "Jayashree PK", "b": "Gowri Subramanian", "scoreA": null, "scoreB": null },
+        { "id": "R1-M3", "a": "Sri Dhanya", "b": "Sruthi M B", "scoreA": null, "scoreB": null },
+        { "id": "R1-M4", "a": "Rugmini Devi", "b": "Gayathri Paramesha", "scoreA": null, "scoreB": null },
         { "id": "R1-M5", "a": "Rajalakshmi Krishnan", "b": "Bageerathy N H", "scoreA": null, "scoreB": null },
         { "id": "R1-M6", "a": "Gayathri", "b": "Keerthana Venkataraman", "scoreA": null, "scoreB": null },
         { "id": "R1-M7", "a": "Varsha Sriram", "b": "Poornalakshmi", "scoreA": null, "scoreB": null },
