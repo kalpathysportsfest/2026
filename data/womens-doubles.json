@@ -24,8 +24,8 @@
         "Sruthi M B & Bhavya N"
       ],
       "matches": [
-        { "id": "GA-R1-M1", "a": "Shyama Suryanarayanan & Akshaya", "b": "Gowri Subramanian & Sri Dhanya", "scoreA": null, "scoreB": null },
-        { "id": "GA-R1-M2", "a": "Gowri Subramanian & Sri Dhanya", "b": "Sruthi M B & Bhavya N", "scoreA": null, "scoreB": null },
+        { "id": "GA-R1-M1", "a": "Shyama Suryanarayanan & Akshaya", "b": "Gowri Subramanian & Sri Dhanya", "scoreA": 15, "scoreB": 14 },
+        { "id": "GA-R1-M2", "a": "Gowri Subramanian & Sri Dhanya", "b": "Sruthi M B & Bhavya N", "scoreA": 15, "scoreB": 12 },
         { "id": "GA-R1-M3", "a": "Shyama Suryanarayanan & Akshaya", "b": "Sruthi M B & Bhavya N", "scoreA": null, "scoreB": null },
         { "id": "GA-R2-M1", "a": "Gowri Subramanian & Sri Dhanya", "b": "Shyama Suryanarayanan & Akshaya", "scoreA": null, "scoreB": null },
         { "id": "GA-R2-M2", "a": "Sruthi M B & Bhavya N", "b": "Gowri Subramanian & Sri Dhanya", "scoreA": null, "scoreB": null },
