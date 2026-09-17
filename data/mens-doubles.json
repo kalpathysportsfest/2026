@@ -1,0 +1,54 @@
+{
+  "id": "mens-doubles",
+  "name": "Men's Doubles",
+  "subtitle": "16 teams · Knockout",
+  "chip": "Best of 3 sets to 21, all rounds",
+  "type": "knockout",
+  "targetScore": 21,
+  "capScore": 30,
+  "bestOf": 3,
+  "rulesFormat": [
+    "16 teams, straight knockout from the Round of 16 through to the Final.",
+    "Every match, every round, is best of 3 sets to 21 points.",
+    "At 20-20 in any set, play to a 2-point lead or a cap of 30 (29-29 goes to one deciding point at 30).",
+    "Ends change after each set, and in a deciding set once the leader reaches 11."
+  ],
+  "rounds": [
+    {
+      "name": "Round of 16",
+      "matches": [
+        { "id": "R16-M1", "a": "Karthi / Jayaram", "b": "Udhith / CT", "scoreA": null, "scoreB": null },
+        { "id": "R16-M2", "a": "CK / Venkataraman", "b": "Srinivasan / Hari", "scoreA": null, "scoreB": null },
+        { "id": "R16-M3", "a": "Krish CB / Anand", "b": "Anand / Prasad", "scoreA": null, "scoreB": null },
+        { "id": "R16-M4", "a": "Viswa / Ram", "b": "Surya / Sivaram", "scoreA": null, "scoreB": null },
+        { "id": "R16-M5", "a": "HH / Kapil", "b": "Sanku / Athul", "scoreA": null, "scoreB": null },
+        { "id": "R16-M6", "a": "GK / Navaneeth", "b": "AK / LS", "scoreA": null, "scoreB": null },
+        { "id": "R16-M7", "a": "Ramaswamy / Sreekanth", "b": "Rajesh / Sridhar", "scoreA": null, "scoreB": null },
+        { "id": "R16-M8", "a": "Sankar / Sriram", "b": "Maddy / Abhi", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Quarterfinals",
+      "matches": [
+        { "id": "QF1", "a": "R16-M1", "b": "R16-M2", "scoreA": null, "scoreB": null },
+        { "id": "QF2", "a": "R16-M3", "b": "R16-M4", "scoreA": null, "scoreB": null },
+        { "id": "QF3", "a": "R16-M5", "b": "R16-M6", "scoreA": null, "scoreB": null },
+        { "id": "QF4", "a": "R16-M7", "b": "R16-M8", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "matches": [
+        { "id": "SF1", "a": "QF1", "b": "QF2", "scoreA": null, "scoreB": null },
+        { "id": "SF2", "a": "QF3", "b": "QF4", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Final & 3rd place",
+      "matches": [
+        { "id": "FINAL", "a": "SF1", "b": "SF2", "scoreA": null, "scoreB": null },
+        { "id": "3RD-PLACE", "a": "SF1:loser", "b": "SF2:loser", "scoreA": null, "scoreB": null }
+      ]
+    }
+  ]
+}

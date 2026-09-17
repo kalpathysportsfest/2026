@@ -1,0 +1,48 @@
+{
+  "id": "girls-singles",
+  "name": "Girls Singles",
+  "subtitle": "4 players · Knockout",
+  "chip": "Single set to 15",
+  "type": "knockout",
+  "targetScore": 15,
+  "capScore": 17,
+  "bestOf": 1,
+  "rulesFormat": [
+    "Single-elimination knockout: 4 players, semifinals then the final.",
+    "Every match is a single set to 15 points, rally-point scoring.",
+    "At 14-14, play continues to a 2-point lead or a cap of 17, whichever comes first."
+  ],
+  "rounds": [
+    {
+      "name": "Semifinals",
+      "matches": [
+        {
+          "id": "SF1",
+          "a": "Ananya Vishwesh",
+          "b": "K.S.Lakshana Shree",
+          "scoreA": 15,
+          "scoreB": 11
+        },
+        {
+          "id": "SF2",
+          "a": "Shriya Praveen",
+          "b": "Aswina KV",
+          "scoreA": 12,
+          "scoreB": 15
+        }
+      ]
+    },
+    {
+      "name": "Final",
+      "matches": [
+        {
+          "id": "FINAL",
+          "a": "SF1",
+          "b": "SF2",
+          "scoreA": null,
+          "scoreB": null
+        }
+      ]
+    }
+  ]
+}

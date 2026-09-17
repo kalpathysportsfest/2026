@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KSF 2026 — Badminton Fixtures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Interactive badminton tournament fixtures for Kalpathy Sports Fest 2026. Powered by 7 category JSON files with live score-to-winner computation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-brand">
+      <div class="logo-wrap">
+        <img class="ksf-logo" src="./assets/ksf-logo.png" alt="KSF 2026 logo" onerror="this.outerHTML='🏸'">
+      </div>
+      <div class="hero-copy">
+        <p class="kicker">Kalpathy Sports Fest · 2026</p>
+        <h1>Badminton fixtures</h1>
+        <p>[20th September 2026] Seven draws, three court.</p>
+        <div class="live-status-bar">
+          <span class="live-badge">
+            <span class="pulse-dot"></span>
+            <span>Live File Backend: 7 Category Files</span>
+          </span>
+          <span class="sync-note" id="sync-time">Syncing data...</span>
+          <button onclick="KSF.refresh()" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:var(--muted);border-radius:4px;padding:2px 8px;font-size:11px;cursor:pointer;">↻ Refresh</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs" id="tabs"></div>
+
+<div class="wrap" id="catHost"></div>
+
+<footer>
+  <p>Kalpathy Sports Fest 2026 · Badminton Tournament Fixtures</p>
+  <p style="opacity:0.6;font-size:11px;margin-top:4px;">File-based backend: 7 JSON files. Enter scores in the JSON files and git commit to update winners automatically.</p>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

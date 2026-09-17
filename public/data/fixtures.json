@@ -1,0 +1,380 @@
+{
+  "tournament": "Kalpathy Sports Fest · 2026",
+  "title": "Badminton fixtures",
+  "date": "20th September 2026",
+  "version": "1.0",
+  "categories": [
+    {
+      "id": "girls-singles",
+      "name": "Girls Singles",
+      "subtitle": "4 players · Knockout",
+      "chip": "Single set to 15",
+      "type": "knockout",
+      "targetScore": 15,
+      "capScore": 17,
+      "bestOf": 1,
+      "rulesFormat": [
+        "Single-elimination knockout: 4 players, semifinals then the final.",
+        "Every match is a single set to 15 points, rally-point scoring.",
+        "At 14-14, play continues to a 2-point lead or a cap of 17, whichever comes first."
+      ],
+      "rounds": [
+        {
+          "name": "Semifinals",
+          "matches": [
+            { "id": "GS-SF1", "a": "Ananya Vishwesh", "b": "K.S.Lakshana Shree" },
+            { "id": "GS-SF2", "a": "Shriya Praveen", "b": "Aswina KV" }
+          ]
+        },
+        {
+          "name": "Final",
+          "matches": [
+            { "id": "GS-FINAL", "a": { "ref": "GS-SF1" }, "b": { "ref": "GS-SF2" } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "womens-singles",
+      "name": "Women's Singles",
+      "subtitle": "16 players · Knockout",
+      "chip": "To 15, best of 3 from SF",
+      "type": "knockout",
+      "targetScore": 15,
+      "capScore": 17,
+      "bestOf": 1,
+      "rulesFormat": [
+        "Single-elimination knockout, 16 players from Round 1.",
+        "Round 1 and Quarterfinals: single set to 15.",
+        "Semifinals, 3rd place and the Final: best of 3 sets to 15.",
+        "At 14-14 in any set, play to a 2-point lead or a cap of 17.",
+        "Deciding set: ends change when the leader reaches 8 points."
+      ],
+      "rounds": [
+        {
+          "name": "Round 1",
+          "matches": [
+            { "id": "WS-R1-M1", "a": "Aneesha V P", "b": "Subhalakshmy C G" },
+            { "id": "WS-R1-M2", "a": "Jayashree PK", "b": "Gowri Subramanian" },
+            { "id": "WS-R1-M3", "a": "Sri Dhanya", "b": "Sruthi M B" },
+            { "id": "WS-R1-M4", "a": "Rugmini Devi", "b": "Gayathri Paramesha" },
+            { "id": "WS-R1-M5", "a": "Rajalakshmi Krishnan", "b": "Bageerathy N H" },
+            { "id": "WS-R1-M6", "a": "Gayathri", "b": "Keerthana Venkataraman" },
+            { "id": "WS-R1-M7", "a": "Varsha Sriram", "b": "Poornalakshmi" },
+            { "id": "WS-R1-M8", "a": "Rajalakshmy Anand", "b": "Akshaya K" }
+          ]
+        },
+        {
+          "name": "Quarterfinals",
+          "matches": [
+            { "id": "WS-QF1", "a": { "ref": "WS-R1-M1" }, "b": { "ref": "WS-R1-M2" } },
+            { "id": "WS-QF2", "a": { "ref": "WS-R1-M3" }, "b": { "ref": "WS-R1-M4" } },
+            { "id": "WS-QF3", "a": { "ref": "WS-R1-M5" }, "b": { "ref": "WS-R1-M6" } },
+            { "id": "WS-QF4", "a": { "ref": "WS-R1-M7" }, "b": { "ref": "WS-R1-M8" } }
+          ]
+        },
+        {
+          "name": "Semifinals",
+          "matches": [
+            { "id": "WS-SF1", "a": { "ref": "WS-QF1" }, "b": { "ref": "WS-QF2" } },
+            { "id": "WS-SF2", "a": { "ref": "WS-QF3" }, "b": { "ref": "WS-QF4" } }
+          ]
+        },
+        {
+          "name": "Final & 3rd place",
+          "matches": [
+            { "id": "WS-FINAL", "a": { "ref": "WS-SF1" }, "b": { "ref": "WS-SF2" } },
+            { "id": "WS-3RD-PLACE", "a": { "ref": "WS-SF1", "loser": true }, "b": { "ref": "WS-SF2", "loser": true } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "womens-doubles",
+      "name": "Women's Doubles",
+      "subtitle": "6 teams · Round robin + final",
+      "chip": "To 15, final best of 3",
+      "type": "roundrobin",
+      "targetScore": 15,
+      "capScore": 17,
+      "bestOf": 1,
+      "groups": [
+        {
+          "id": "WD-GA",
+          "name": "Group A",
+          "teams": [
+            "Shyama Suryanarayanan & Akshaya",
+            "Gowri Subramanian & Sri Dhanya",
+            "Sruthi M B & Bhavya N"
+          ],
+          "matches": [
+            { "id": "WD-GA-R1-M1", "a": "Shyama Suryanarayanan & Akshaya", "b": "Gowri Subramanian & Sri Dhanya" },
+            { "id": "WD-GA-R1-M2", "a": "Gowri Subramanian & Sri Dhanya", "b": "Sruthi M B & Bhavya N" },
+            { "id": "WD-GA-R1-M3", "a": "Shyama Suryanarayanan & Akshaya", "b": "Sruthi M B & Bhavya N" },
+            { "id": "WD-GA-R2-M1", "a": "Gowri Subramanian & Sri Dhanya", "b": "Shyama Suryanarayanan & Akshaya" },
+            { "id": "WD-GA-R2-M2", "a": "Sruthi M B & Bhavya N", "b": "Gowri Subramanian & Sri Dhanya" },
+            { "id": "WD-GA-R2-M3", "a": "Sruthi M B & Bhavya N", "b": "Shyama Suryanarayanan & Akshaya" }
+          ]
+        },
+        {
+          "id": "WD-GB",
+          "name": "Group B",
+          "teams": [
+            "Bageerathy N H & Gayathri",
+            "Keerthana Venkataraman & Mahalakshmi",
+            "Gayathri Paramesha & Rajalakshmi"
+          ],
+          "matches": [
+            { "id": "WD-GB-R1-M1", "a": "Bageerathy N H & Gayathri", "b": "Keerthana Venkataraman & Mahalakshmi" },
+            { "id": "WD-GB-R1-M2", "a": "Keerthana Venkataraman & Mahalakshmi", "b": "Gayathri Paramesha & Rajalakshmi" },
+            { "id": "WD-GB-R1-M3", "a": "Bageerathy N H & Gayathri", "b": "Gayathri Paramesha & Rajalakshmi" },
+            { "id": "WD-GB-R2-M1", "a": "Keerthana Venkataraman & Mahalakshmi", "b": "Bageerathy N H & Gayathri" },
+            { "id": "WD-GB-R2-M2", "a": "Gayathri Paramesha & Rajalakshmi", "b": "Keerthana Venkataraman & Mahalakshmi" },
+            { "id": "WD-GB-R2-M3", "a": "Gayathri Paramesha & Rajalakshmi", "b": "Bageerathy N H & Gayathri" }
+          ]
+        }
+      ],
+      "rounds": [
+        {
+          "name": "Final",
+          "matches": [
+            { "id": "WD-FINAL", "a": { "group": "WD-GA", "rank": 1 }, "b": { "group": "WD-GB", "rank": 1 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boys-singles",
+      "name": "Boys Singles",
+      "subtitle": "29 players · Knockout",
+      "chip": "To 15, best of 3 from SF",
+      "type": "knockout",
+      "targetScore": 15,
+      "capScore": 17,
+      "bestOf": 1,
+      "rounds": [
+        {
+          "name": "Round 1 · Group 1",
+          "byeNote": "Bye: Rishi Praveen",
+          "matches": [
+            { "id": "BS-G1-M1", "a": "Sanchu", "b": "L.Adwaidmuthukrishnan" },
+            { "id": "BS-G1-M2", "a": "Sreeram", "b": "Thanmay" },
+            { "id": "BS-G1-M3", "a": "Badrinath PB", "b": "Siddharth G Iyer" },
+            { "id": "BS-G1-M4", "a": "P S Srinivasan", "b": "HARIDATH P" },
+            { "id": "BS-G1-M5", "a": "Rithul. K", "b": "Advaith Anand" },
+            { "id": "BS-G1-M6", "a": "Sidharth", "b": "ADITHYA" },
+            { "id": "BS-G1-M7", "a": "Viresh Balasubramanian R", "b": "Aayush Vijayan" }
+          ]
+        },
+        {
+          "name": "Round 1 · Group 2",
+          "byeNote": "Byes: Sriniketh. S, Subru",
+          "matches": [
+            { "id": "BS-G2-M1", "a": "Vaibhav", "b": "Akhilesh" },
+            { "id": "BS-G2-M2", "a": "Sreehari S", "b": "Arjith.A" },
+            { "id": "BS-G2-M3", "a": "Ramjith A", "b": "T. S. Sreehari" },
+            { "id": "BS-G2-M4", "a": "Karthik", "b": "RISHIKESH G" },
+            { "id": "BS-G2-M5", "a": "Rishi Santhosh R", "b": "Navaneeth Krishna" },
+            { "id": "BS-G2-M6", "a": "Rishikesh LNP", "b": "Mrithyunjay ms" }
+          ]
+        },
+        {
+          "name": "Round of 16",
+          "matches": [
+            { "id": "BS-R16-M1", "a": { "ref": "BS-G1-M7" }, "b": { "ref": "BS-G2-M4" } },
+            { "id": "BS-R16-M2", "a": { "ref": "BS-G1-M2" }, "b": { "ref": "BS-G2-M1" } },
+            { "id": "BS-R16-M3", "a": { "ref": "BS-G1-M5" }, "b": "Subru" },
+            { "id": "BS-R16-M4", "a": { "ref": "BS-G1-M4" }, "b": { "ref": "BS-G2-M3" } },
+            { "id": "BS-R16-M5", "a": { "ref": "BS-G1-M1" }, "b": { "ref": "BS-G2-M2" } },
+            { "id": "BS-R16-M6", "a": { "ref": "BS-G1-M6" }, "b": { "ref": "BS-G2-M6" } },
+            { "id": "BS-R16-M7", "a": "Rishi Praveen", "b": { "ref": "BS-G2-M5" } },
+            { "id": "BS-R16-M8", "a": { "ref": "BS-G1-M3" }, "b": "Sriniketh. S" }
+          ]
+        },
+        {
+          "name": "Quarterfinals",
+          "matches": [
+            { "id": "BS-QF1", "a": { "ref": "BS-R16-M1" }, "b": { "ref": "BS-R16-M2" } },
+            { "id": "BS-QF2", "a": { "ref": "BS-R16-M3" }, "b": { "ref": "BS-R16-M4" } },
+            { "id": "BS-QF3", "a": { "ref": "BS-R16-M5" }, "b": { "ref": "BS-R16-M6" } },
+            { "id": "BS-QF4", "a": { "ref": "BS-R16-M7" }, "b": { "ref": "BS-R16-M8" } }
+          ]
+        },
+        {
+          "name": "Semifinals",
+          "matches": [
+            { "id": "BS-SF1", "a": { "ref": "BS-QF1" }, "b": { "ref": "BS-QF2" } },
+            { "id": "BS-SF2", "a": { "ref": "BS-QF3" }, "b": { "ref": "BS-QF4" } }
+          ]
+        },
+        {
+          "name": "Final & 3rd place",
+          "matches": [
+            { "id": "BS-FINAL", "a": { "ref": "BS-SF1" }, "b": { "ref": "BS-SF2" } },
+            { "id": "BS-3RD-PLACE", "a": { "ref": "BS-SF1", "loser": true }, "b": { "ref": "BS-SF2", "loser": true } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boys-doubles",
+      "name": "Boys' Doubles",
+      "subtitle": "5 teams · Round robin + final",
+      "chip": "Single set to 15",
+      "type": "roundrobin",
+      "targetScore": 15,
+      "capScore": 17,
+      "bestOf": 1,
+      "groups": [
+        {
+          "id": "BD",
+          "name": "Round Robin",
+          "teams": [
+            "HARIDATH P & Vishnudev",
+            "Sreehari & Sidharth",
+            "Subru & Aayush",
+            "Sriniketh. S & Viresh",
+            "Thanmay & Rishikesh"
+          ],
+          "matches": [
+            { "id": "BD-R1-M1", "a": "Sreehari & Sidharth", "b": "Thanmay & Rishikesh" },
+            { "id": "BD-R1-M2", "a": "Subru & Aayush", "b": "Sriniketh. S & Viresh" },
+            { "id": "BD-R2-M1", "a": "HARIDATH P & Vishnudev", "b": "Thanmay & Rishikesh" },
+            { "id": "BD-R2-M2", "a": "Sreehari & Sidharth", "b": "Subru & Aayush" },
+            { "id": "BD-R3-M1", "a": "HARIDATH P & Vishnudev", "b": "Sriniketh. S & Viresh" },
+            { "id": "BD-R3-M2", "a": "Subru & Aayush", "b": "Thanmay & Rishikesh" },
+            { "id": "BD-R4-M1", "a": "HARIDATH P & Vishnudev", "b": "Subru & Aayush" },
+            { "id": "BD-R4-M2", "a": "Sreehari & Sidharth", "b": "Sriniketh. S & Viresh" },
+            { "id": "BD-R5-M1", "a": "HARIDATH P & Vishnudev", "b": "Sreehari & Sidharth" },
+            { "id": "BD-R5-M2", "a": "Sriniketh. S & Viresh", "b": "Thanmay & Rishikesh" }
+          ]
+        }
+      ],
+      "rounds": [
+        {
+          "name": "Final",
+          "matches": [
+            { "id": "BD-FINAL", "a": { "group": "BD", "rank": 1 }, "b": { "group": "BD", "rank": 2 } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mens-singles",
+      "name": "Men's Singles",
+      "subtitle": "32 players · Knockout",
+      "chip": "To 21, best of 3 from SF",
+      "type": "knockout",
+      "targetScore": 21,
+      "capScore": 25,
+      "bestOf": 1,
+      "rounds": [
+        {
+          "name": "Round of 32",
+          "matches": [
+            { "id": "MS-R32-M1", "a": "Ramaswamy Mathur", "b": "VENKATESH P H" },
+            { "id": "MS-R32-M2", "a": "R V SIVARAMAKRISHNAN", "b": "Ganesh Krishnan" },
+            { "id": "MS-R32-M3", "a": "Sreeraj K.R", "b": "Girish" },
+            { "id": "MS-R32-M4", "a": "Vichu Grp", "b": "Prasad Parameswaran" },
+            { "id": "MS-R32-M5", "a": "Navaneeth", "b": "Venkiteswaran K" },
+            { "id": "MS-R32-M6", "a": "Parameswaran", "b": "Suraj" },
+            { "id": "MS-R32-M7", "a": "Aswath G", "b": "Gokul Iyer" },
+            { "id": "MS-R32-M8", "a": "V A SURYANARAYANAN", "b": "Karthik" },
+            { "id": "MS-R32-M9", "a": "Narayanan CK", "b": "Arjun LK" },
+            { "id": "MS-R32-M10", "a": "Sarath", "b": "Santhosh" },
+            { "id": "MS-R32-M11", "a": "Ashwin PK", "b": "Raman" },
+            { "id": "MS-R32-M12", "a": "GANAPATHI TV", "b": "Sankar R" },
+            { "id": "MS-R32-M13", "a": "Sriram Tharekkad (Venkiteswaran)", "b": "Arun" },
+            { "id": "MS-R32-M14", "a": "Venkitaramanan k.v.", "b": "Sreenivasan T H" },
+            { "id": "MS-R32-M15", "a": "Anand S", "b": "PRADEEP SANKAR .P" },
+            { "id": "MS-R32-M16", "a": "Harish A K", "b": "Viswanathan" }
+          ]
+        },
+        {
+          "name": "Round of 16",
+          "matches": [
+            { "id": "MS-R16-M1", "a": { "ref": "MS-R32-M1" }, "b": { "ref": "MS-R32-M2" } },
+            { "id": "MS-R16-M2", "a": { "ref": "MS-R32-M3" }, "b": { "ref": "MS-R32-M4" } },
+            { "id": "MS-R16-M3", "a": { "ref": "MS-R32-M5" }, "b": { "ref": "MS-R32-M6" } },
+            { "id": "MS-R16-M4", "a": { "ref": "MS-R32-M7" }, "b": { "ref": "MS-R32-M8" } },
+            { "id": "MS-R16-M5", "a": { "ref": "MS-R32-M9" }, "b": { "ref": "MS-R32-M10" } },
+            { "id": "MS-R16-M6", "a": { "ref": "MS-R32-M11" }, "b": { "ref": "MS-R32-M12" } },
+            { "id": "MS-R16-M7", "a": { "ref": "MS-R32-M13" }, "b": { "ref": "MS-R32-M14" } },
+            { "id": "MS-R16-M8", "a": { "ref": "MS-R32-M15" }, "b": { "ref": "MS-R32-M16" } }
+          ]
+        },
+        {
+          "name": "Quarterfinals",
+          "matches": [
+            { "id": "MS-QF1", "a": { "ref": "MS-R16-M1" }, "b": { "ref": "MS-R16-M2" } },
+            { "id": "MS-QF2", "a": { "ref": "MS-R16-M3" }, "b": { "ref": "MS-R16-M4" } },
+            { "id": "MS-QF3", "a": { "ref": "MS-R16-M5" }, "b": { "ref": "MS-R16-M6" } },
+            { "id": "MS-QF4", "a": { "ref": "MS-R16-M7" }, "b": { "ref": "MS-R16-M8" } }
+          ]
+        },
+        {
+          "name": "Semifinals",
+          "matches": [
+            { "id": "MS-SF1", "a": { "ref": "MS-QF1" }, "b": { "ref": "MS-QF2" } },
+            { "id": "MS-SF2", "a": { "ref": "MS-QF3" }, "b": { "ref": "MS-QF4" } }
+          ]
+        },
+        {
+          "name": "Final & 3rd place",
+          "matches": [
+            { "id": "MS-FINAL", "a": { "ref": "MS-SF1" }, "b": { "ref": "MS-SF2" } },
+            { "id": "MS-3RD-PLACE", "a": { "ref": "MS-SF1", "loser": true }, "b": { "ref": "MS-SF2", "loser": true } }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mens-doubles",
+      "name": "Men's Doubles",
+      "subtitle": "16 teams · Knockout",
+      "chip": "Best of 3 sets to 21, all rounds",
+      "type": "knockout",
+      "targetScore": 21,
+      "capScore": 30,
+      "bestOf": 3,
+      "rounds": [
+        {
+          "name": "Round of 16",
+          "matches": [
+            { "id": "MD-R16-M1", "a": "Karthi / Jayaram", "b": "Udhith / CT" },
+            { "id": "MD-R16-M2", "a": "CK / Venkataraman", "b": "Srinivasan / Hari" },
+            { "id": "MD-R16-M3", "a": "Krish CB / Anand", "b": "Anand / Prasad" },
+            { "id": "MD-R16-M4", "a": "Viswa / Ram", "b": "Surya / Sivaram" },
+            { "id": "MD-R16-M5", "a": "HH / Kapil", "b": "Sanku / Athul" },
+            { "id": "MD-R16-M6", "a": "GK / Navaneeth", "b": "AK / LS" },
+            { "id": "MD-R16-M7", "a": "Ramaswamy / Sreekanth", "b": "Rajesh / Sridhar" },
+            { "id": "MD-R16-M8", "a": "Sankar / Sriram", "b": "Maddy / Abhi" }
+          ]
+        },
+        {
+          "name": "Quarterfinals",
+          "matches": [
+            { "id": "MD-QF1", "a": { "ref": "MD-R16-M1" }, "b": { "ref": "MD-R16-M2" } },
+            { "id": "MD-QF2", "a": { "ref": "MD-R16-M3" }, "b": { "ref": "MD-R16-M4" } },
+            { "id": "MD-QF3", "a": { "ref": "MD-R16-M5" }, "b": { "ref": "MD-R16-M6" } },
+            { "id": "MD-QF4", "a": { "ref": "MD-R16-M7" }, "b": { "ref": "MD-R16-M8" } }
+          ]
+        },
+        {
+          "name": "Semifinals",
+          "matches": [
+            { "id": "MD-SF1", "a": { "ref": "MD-QF1" }, "b": { "ref": "MD-QF2" } },
+            { "id": "MD-SF2", "a": { "ref": "MD-QF3" }, "b": { "ref": "MD-QF4" } }
+          ]
+        },
+        {
+          "name": "3rd place & Final",
+          "matches": [
+            { "id": "MD-FINAL", "a": { "ref": "MD-SF1" }, "b": { "ref": "MD-SF2" } },
+            { "id": "MD-3RD-PLACE", "a": { "ref": "MD-SF1", "loser": true }, "b": { "ref": "MD-SF2", "loser": true } }
+          ]
+        }
+      ]
+    }
+  ]
+}

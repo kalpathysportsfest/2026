@@ -1,0 +1,55 @@
+{
+  "id": "womens-singles",
+  "name": "Women's Singles",
+  "subtitle": "16 players · Knockout",
+  "chip": "To 15, best of 3 from SF",
+  "type": "knockout",
+  "targetScore": 15,
+  "capScore": 17,
+  "bestOf": 1,
+  "rulesFormat": [
+    "Single-elimination knockout, 16 players from Round 1.",
+    "Round 1 and Quarterfinals: single set to 15.",
+    "Semifinals, 3rd place and the Final: best of 3 sets to 15.",
+    "At 14-14 in any set, play to a 2-point lead or a cap of 17.",
+    "Deciding set: ends change when the leader reaches 8 points."
+  ],
+  "rounds": [
+    {
+      "name": "Round 1",
+      "matches": [
+        { "id": "R1-M1", "a": "Aneesha V P", "b": "Subhalakshmy C G", "scoreA": 15, "scoreB": 8 },
+        { "id": "R1-M2", "a": "Jayashree PK", "b": "Gowri Subramanian", "scoreA": 11, "scoreB": 15 },
+        { "id": "R1-M3", "a": "Sri Dhanya", "b": "Sruthi M B", "scoreA": 15, "scoreB": 13 },
+        { "id": "R1-M4", "a": "Rugmini Devi", "b": "Gayathri Paramesha", "scoreA": 9, "scoreB": 15 },
+        { "id": "R1-M5", "a": "Rajalakshmi Krishnan", "b": "Bageerathy N H", "scoreA": null, "scoreB": null },
+        { "id": "R1-M6", "a": "Gayathri", "b": "Keerthana Venkataraman", "scoreA": null, "scoreB": null },
+        { "id": "R1-M7", "a": "Varsha Sriram", "b": "Poornalakshmi", "scoreA": null, "scoreB": null },
+        { "id": "R1-M8", "a": "Rajalakshmy Anand", "b": "Akshaya K", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Quarterfinals",
+      "matches": [
+        { "id": "QF1", "a": "R1-M1", "b": "R1-M2", "scoreA": null, "scoreB": null },
+        { "id": "QF2", "a": "R1-M3", "b": "R1-M4", "scoreA": null, "scoreB": null },
+        { "id": "QF3", "a": "R1-M5", "b": "R1-M6", "scoreA": null, "scoreB": null },
+        { "id": "QF4", "a": "R1-M7", "b": "R1-M8", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Semifinals",
+      "matches": [
+        { "id": "SF1", "a": "QF1", "b": "QF2", "scoreA": null, "scoreB": null },
+        { "id": "SF2", "a": "QF3", "b": "QF4", "scoreA": null, "scoreB": null }
+      ]
+    },
+    {
+      "name": "Final & 3rd place",
+      "matches": [
+        { "id": "FINAL", "a": "SF1", "b": "SF2", "scoreA": null, "scoreB": null },
+        { "id": "3RD-PLACE", "a": "SF1:loser", "b": "SF2:loser", "scoreA": null, "scoreB": null }
+      ]
+    }
+  ]
+}

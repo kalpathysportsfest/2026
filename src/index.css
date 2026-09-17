@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --court-deep: #0d143c;
+  --court-mid: #162058;
+  --court-line: #f6f3ea;
+  --gold: #e0a815;
+  --gold-soft: rgba(242, 194, 48, 0.12);
+  --gold-strong: #f2c230;
+  --win: #4fae7d;
+  --win-bg: rgba(79, 174, 125, 0.18);
+  --card-bg: #111411;
+  --card-border: #262c26;
+  --muted: #9ba498;
+}
+
+body {
+  margin: 0;
+  background: #050605;
+  color: #f6f3ea;
+  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-heading {
+  font-family: 'Oswald', Impact, 'Arial Narrow', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d100d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a332a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e4d3e;
+}

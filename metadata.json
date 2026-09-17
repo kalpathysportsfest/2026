@@ -1,0 +1,6 @@
+{
+  "name": "KSF 2026 Badminton Fixtures",
+  "description": "Interactive badminton tournament fixtures, live standings, and automated bracket scoring with a file-based GitHub Pages backend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
