@@ -28,43 +28,43 @@
           "id": "GA-R1-M1",
           "a": "Shyama Suryanarayanan & Akshaya",
           "b": "Gowri Subramanian & Sri Dhanya",
-          "scoreA": 14,
-          "scoreB": 15
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "GA-R1-M2",
           "a": "Gowri Subramanian & Sri Dhanya",
           "b": "Sruthi M B & Bhavya N",
-          "scoreA": 13,
-          "scoreB": 15
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "GA-R1-M3",
           "a": "Shyama Suryanarayanan & Akshaya",
           "b": "Sruthi M B & Bhavya N",
-          "scoreA": 15,
-          "scoreB": 12
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "GA-R2-M1",
           "a": "Gowri Subramanian & Sri Dhanya",
           "b": "Shyama Suryanarayanan & Akshaya",
-          "scoreA": 15,
-          "scoreB": 11
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "GA-R2-M2",
           "a": "Sruthi M B & Bhavya N",
           "b": "Gowri Subramanian & Sri Dhanya",
-          "scoreA": 15,
-          "scoreB": 10
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "GA-R2-M3",
           "a": "Sruthi M B & Bhavya N",
           "b": "Shyama Suryanarayanan & Akshaya",
-          "scoreA": 10,
-          "scoreB": 15
+          "scoreA": null,
+          "scoreB": null
         }
       ]
     },

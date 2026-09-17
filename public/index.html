@@ -72,6 +72,18 @@ h1, h2, h3, .disp {
   background: rgba(242, 194, 48, 0.08);
   border: 1px solid rgba(242, 194, 48, 0.3);
   font-size: 38px;
+  overflow: hidden;
+  position: relative;
+}
+.ksf-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.logo-fallback {
+  font-size: 38px;
+  line-height: 1;
 }
 .hero-copy {
   min-width: 0;
@@ -98,31 +110,48 @@ h1, h2, h3, .disp {
   font-size: 14px;
   max-width: 600px;
 }
-.live-status-bar {
+.hero-meta-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 13px;
   flex-wrap: wrap;
 }
-.live-badge {
+.tourney-status-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 3px 10px;
   border-radius: 999px;
-  background: rgba(79, 174, 125, 0.15);
-  border: 1px solid rgba(79, 174, 125, 0.4);
-  color: #8be0b2;
+  font-size: 12px;
   font-weight: 600;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--hair-strong);
+  color: var(--muted);
+}
+.tourney-status-badge.is-live {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+.tourney-status-badge.is-live .pulse-dot {
+  background: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+}
+.meta-dot {
+  color: var(--hair-strong);
+}
+.court-summary {
+  color: var(--muted);
+  font-size: 13px;
 }
 .pulse-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #4fae7d;
-  box-shadow: 0 0 8px #4fae7d;
+  box-shadow: 0 0 6px #4fae7d;
   animation: pulse 1.8s infinite;
 }
 @keyframes pulse {
@@ -130,21 +159,43 @@ h1, h2, h3, .disp {
   50% { opacity: 1; }
   100% { opacity: 0.4; }
 }
-.sync-note {
+
+/* Match & Category status badges: Live, Upcoming, Completed */
+.badge-status {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.2;
+}
+.badge-live {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.45);
+  color: #fca5a5;
+}
+.badge-live .pulse-dot {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+}
+.badge-completed {
+  background: rgba(79, 174, 125, 0.15);
+  border: 1px solid rgba(79, 174, 125, 0.35);
+  color: #79dca6;
+}
+.badge-upcoming {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--muted);
 }
-.refresh-btn {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--ink);
-  border-radius: 6px;
-  padding: 3px 10px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.refresh-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+.badge-inprogress {
+  background: rgba(242, 194, 48, 0.12);
+  border: 1px solid rgba(242, 194, 48, 0.3);
+  color: var(--gold);
 }
 .tabs {
   display: flex;
@@ -497,19 +548,17 @@ footer {
   <div class="hero-inner">
     <div class="hero-brand">
       <div class="logo-wrap">
-        <span>🏸</span>
+        <img class="ksf-logo" src="./logo.png" alt="Kalpathy Sports Fest logo" onerror="this.onerror=null;this.style.display='none';var fb=this.parentElement.querySelector('.logo-fallback');if(fb)fb.style.display='block';">
+        <span class="logo-fallback" style="display:none;">🏸</span>
       </div>
       <div class="hero-copy">
         <p class="kicker">Kalpathy Sports Fest · 2026</p>
         <h1>Badminton fixtures</h1>
         <p>[20th September 2026] Seven draws, three court.</p>
-        <div class="live-status-bar">
-          <span class="live-badge">
-            <span class="pulse-dot"></span>
-            <span>Live File Backend: 7 Category Files</span>
-          </span>
-          <span class="sync-note" id="sync-time">Syncing data...</span>
-          <button class="refresh-btn" onclick="KSF.refresh()">↻ Refresh</button>
+        <div class="hero-meta-row">
+          <span class="tourney-status-badge" id="global-status-badge">Upcoming · 20th Sept 2026</span>
+          <span class="meta-dot">·</span>
+          <span class="court-summary">3 Courts</span>
         </div>
       </div>
     </div>
@@ -522,7 +571,7 @@ footer {
 
 <footer>
   <p>Kalpathy Sports Fest 2026 · Badminton Tournament Fixtures</p>
-  <p style="opacity:0.6;font-size:11px;margin-top:4px;">File-based backend: 7 JSON files. Enter scores in the JSON files and git commit to update winners automatically.</p>
+  <p style="opacity:0.6;font-size:11px;margin-top:4px;">Official tournament draws &amp; schedules</p>
 </footer>
 
 <script>
@@ -708,9 +757,21 @@ footer {
         }
       });
 
+      // Count remaining unplayed matches per team in this group
+      var totalUnplayed = 0;
+      g.matches.forEach(function(m) {
+        var outcome = getMatchOutcome(m);
+        if (!outcome.winnerSide) {
+          totalUnplayed++;
+          if (stats[m.a]) stats[m.a].rem = (stats[m.a].rem || 0) + 1;
+          if (stats[m.b]) stats[m.b].rem = (stats[m.b].rem || 0) + 1;
+        }
+      });
+
       var list = g.teams.map(function(t) {
         var s = stats[t];
         s.diff = s.pf - s.pa;
+        s.rem = s.rem || 0;
         return s;
       });
 
@@ -720,13 +781,63 @@ footer {
 
       standings[g.id] = list;
 
-      list.forEach(function(item, idx) {
-        var rankNum = idx + 1;
-        if (item.w > 0 || item.p > 0) {
+      // Condition for advancing finalists:
+      // A team is ONLY accepted as finalist if:
+      // 1) All group matches are completed, OR
+      // 2) It is mathematically impossible for another team to overtake them (wins, then point difference)
+      if (totalUnplayed === 0) {
+        // All matches played -> final standings are 100% locked
+        list.forEach(function(item, idx) {
+          var rankNum = idx + 1;
           ctx.groupRanks[g.id + ":" + rankNum] = item.name;
           if (rankNum === 1) ctx.groupRanks[g.id] = item.name;
+        });
+      } else {
+        // Can team Y mathematically overtake team X on wins or point difference?
+        function canOvertake(y, x) {
+          var maxYWins = y.w + (y.rem || 0);
+          var minXWins = x.w;
+          if (maxYWins > minXWins) return true;
+          if (maxYWins === minXWins) {
+            var target = cat.targetScore || 15;
+            var maxYDiff = y.diff + (y.rem || 0) * target;
+            var minXDiff = x.diff - (x.rem || 0) * target;
+            if (maxYDiff >= minXDiff) return true;
+          }
+          return false;
         }
-      });
+
+        // Check if Rank 1 is mathematically clinched
+        var leader = list[0];
+        if (leader && leader.p > 0) {
+          var leaderClinched = true;
+          for (var i = 1; i < list.length; i++) {
+            if (canOvertake(list[i], leader)) {
+              leaderClinched = false;
+              break;
+            }
+          }
+          if (leaderClinched) {
+            ctx.groupRanks[g.id + ":1"] = leader.name;
+            ctx.groupRanks[g.id] = leader.name;
+          }
+        }
+
+        // Check if Rank 2 is mathematically clinched (for groups where top 2 advance)
+        if (ctx.groupRanks[g.id + ":1"] && list.length > 1) {
+          var second = list[1];
+          var secondClinched = true;
+          for (var j = 2; j < list.length; j++) {
+            if (canOvertake(list[j], second)) {
+              secondClinched = false;
+              break;
+            }
+          }
+          if (secondClinched) {
+            ctx.groupRanks[g.id + ":2"] = second.name;
+          }
+        }
+      }
     });
 
     return standings;
@@ -775,21 +886,41 @@ footer {
     return ctx;
   }
 
+  /* Determine match status: 'live', 'upcoming', 'completed' */
+  function getMatchStatus(m, outcome) {
+    if (m.status) {
+      var s = String(m.status).trim().toLowerCase();
+      if (s === "live" || s === "in-progress" || s === "ongoing" || s === "playing") return "live";
+      if (s === "completed" || s === "finished" || s === "done") return "completed";
+      if (s === "upcoming" || s === "scheduled") return "upcoming";
+    }
+    if (m.live === true) return "live";
+    if (outcome.winnerSide) return "completed";
+    return "upcoming";
+  }
+
+  function renderStatusBadge(status) {
+    if (status === "live") {
+      return '<span class="badge-status badge-live"><span class="pulse-dot"></span>Live</span>';
+    }
+    if (status === "completed") {
+      return '<span class="badge-status badge-completed">Completed</span>';
+    }
+    return '<span class="badge-status badge-upcoming">Upcoming</span>';
+  }
+
   /* Render a knockout match card */
   function renderMatchCard(m, ctx) {
     var a = resolveParticipant(m.a, ctx);
     var b = resolveParticipant(m.b, ctx);
     var outcome = getMatchOutcome(m);
+    var status = getMatchStatus(m, outcome);
 
     var isWinA = outcome.winnerSide === "A";
     var isWinB = outcome.winnerSide === "B";
 
-    var html = '<div class="match" id="match-' + esc(m.id) + '">';
-    html += '<div class="m-id"><span>' + esc(m.id) + '</span>';
-    if (outcome.winnerSide) {
-      html += '<span style="color:var(--win);font-size:10.5px;">Completed</span>';
-    }
-    html += '</div>';
+    var html = '<div class="match match-' + status + '" id="match-' + esc(m.id) + '">';
+    html += '<div class="m-id"><span>' + esc(m.id) + '</span>' + renderStatusBadge(status) + '</div>';
 
     // Side A
     var classA = "side" + (isWinA ? " win" : "") + (a.isPending ? " placeholder" : "");
@@ -872,17 +1003,19 @@ footer {
         html += '<div class="rr-matches">';
         g.matches.forEach(function(m) {
           var outcome = getMatchOutcome(m);
+          var status = getMatchStatus(m, outcome);
           var isWinA = outcome.winnerSide === "A";
           var isWinB = outcome.winnerSide === "B";
 
-          html += '<div class="rr-match">' +
-            '<span class="rr-id">' + esc(m.id.replace(g.id + "-", "")) + '</span>' +
+          html += '<div class="rr-match match-' + status + '">' +
+            '<div style="display:flex;align-items:center;gap:6px;"><span class="rr-id">' + esc(m.id.replace(g.id + "-", "")) + '</span>' + renderStatusBadge(status) + '</div>' +
+            '<div style="display:flex;align-items:center;gap:6px;flex:1;min-width:0;">' +
             '<span class="rr-side' + (isWinA ? " win" : "") + '">' + esc(m.a) + '</span>' +
             (outcome.scoreLabelA ? '<span class="score-tag">' + esc(outcome.scoreLabelA) + '</span>' : '') +
             '<span class="vs">v</span>' +
             (outcome.scoreLabelB ? '<span class="score-tag">' + esc(outcome.scoreLabelB) + '</span>' : '') +
             '<span class="rr-side' + (isWinB ? " win" : "") + '">' + esc(m.b) + '</span>' +
-            '</div>';
+            '</div></div>';
         });
         html += '</div>';
 
@@ -922,15 +1055,54 @@ footer {
     if (champHost) {
       champHost.innerHTML = renderChampionLine(cat, ctx);
     }
+
+    /* Update category status badge */
+    var catMatches = 0, catLive = 0, catCompleted = 0;
+    function tallyMatch(m) {
+      catMatches++;
+      var out = getMatchOutcome(m);
+      var st = getMatchStatus(m, out);
+      if (st === "live") catLive++;
+      else if (st === "completed") catCompleted++;
+    }
+    if (cat.groups) {
+      cat.groups.forEach(function(g) { g.matches.forEach(tallyMatch); });
+    }
+    if (cat.rounds) {
+      cat.rounds.forEach(function(r) { r.matches.forEach(tallyMatch); });
+    }
+
+    var catStatusEl = document.getElementById("cat-status-" + cat.id);
+    if (catStatusEl) {
+      if (catLive > 0) {
+        catStatusEl.className = "badge-status badge-live";
+        catStatusEl.innerHTML = '<span class="pulse-dot"></span>Live (' + catLive + ')';
+      } else if (catCompleted === catMatches && catMatches > 0) {
+        catStatusEl.className = "badge-status badge-completed";
+        catStatusEl.textContent = "Completed";
+      } else if (catCompleted > 0) {
+        catStatusEl.className = "badge-status badge-inprogress";
+        catStatusEl.textContent = "In Progress (" + catCompleted + "/" + catMatches + ")";
+      } else {
+        catStatusEl.className = "badge-status badge-upcoming";
+        catStatusEl.textContent = "Upcoming";
+      }
+    }
   }
 
   /* Fetch all 7 category files with multi-path fallback and cache-busting */
   function fetchCategoryFile(filename) {
     var ts = "?_t=" + Date.now();
+    var pathname = window.location.pathname || "/";
+    var baseDir = pathname.substring(0, pathname.lastIndexOf("/") + 1);
+    if (!baseDir.endsWith("/")) baseDir += "/";
+
     var pathsToTry = [
       "./data/" + filename + ts,
+      baseDir + "data/" + filename + ts,
       "data/" + filename + ts,
-      "./" + filename + ts
+      "./" + filename + ts,
+      baseDir + filename + ts
     ];
 
     function tryPath(idx) {
@@ -962,14 +1134,21 @@ footer {
     });
 
     return Promise.all(promises).then(function() {
-      lastSyncDate = new Date();
-      var timeEl = document.getElementById("sync-time");
-      if (timeEl) {
-        timeEl.textContent = "Synced: " + lastSyncDate.toLocaleTimeString();
-      }
+      var totalMatches = 0, totalLive = 0, totalCompleted = 0;
+
       CATEGORY_FILES.forEach(function(item) {
         var cat = catDataMap[item.id];
         if (cat) {
+          function scan(m) {
+            totalMatches++;
+            var out = getMatchOutcome(m);
+            var st = getMatchStatus(m, out);
+            if (st === "live") totalLive++;
+            else if (st === "completed") totalCompleted++;
+          }
+          if (cat.groups) cat.groups.forEach(function(g) { g.matches.forEach(scan); });
+          if (cat.rounds) cat.rounds.forEach(function(r) { r.matches.forEach(scan); });
+
           var titleEl = document.getElementById("title-" + item.id);
           var subEl = document.getElementById("sub-" + item.id);
           var chipEl = document.getElementById("chip-" + item.id);
@@ -985,6 +1164,23 @@ footer {
           renderCategoryView(cat);
         }
       });
+
+      var globalBadge = document.getElementById("global-status-badge");
+      if (globalBadge) {
+        if (totalLive > 0) {
+          globalBadge.className = "tourney-status-badge is-live";
+          globalBadge.innerHTML = '<span class="pulse-dot"></span>' + totalLive + ' Match' + (totalLive > 1 ? 'es' : '') + ' Live';
+        } else if (totalCompleted === totalMatches && totalMatches > 0) {
+          globalBadge.className = "tourney-status-badge";
+          globalBadge.innerHTML = 'Tournament Completed';
+        } else if (totalCompleted > 0) {
+          globalBadge.className = "tourney-status-badge";
+          globalBadge.innerHTML = 'In Progress (' + totalCompleted + '/' + totalMatches + ' Completed)';
+        } else {
+          globalBadge.className = "tourney-status-badge";
+          globalBadge.innerHTML = 'Upcoming · 20th Sept 2026';
+        }
+      }
     });
   }
 
@@ -1025,6 +1221,7 @@ footer {
           '<p class="cat-sub" id="sub-' + esc(item.id) + '">Loading data...</p></div>' +
           '<div style="display:flex;align-items:center;gap:8px;">' +
             '<span class="chip" id="chip-' + esc(item.id) + '">Loading...</span>' +
+            '<span class="badge-status badge-upcoming" id="cat-status-' + esc(item.id) + '">Upcoming</span>' +
           '</div>' +
         '</div>' +
         '<div class="rules-host" id="rules-host-' + esc(item.id) + '"></div>' +

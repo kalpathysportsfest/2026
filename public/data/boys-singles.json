@@ -18,61 +18,235 @@
       "name": "Round 1 · Group 1",
       "byeNote": "Bye: Rishi Praveen",
       "matches": [
-        { "id": "G1-M1", "a": "Sanchu", "b": "L.Adwaidmuthukrishnan", "scoreA": null, "scoreB": null },
-        { "id": "G1-M2", "a": "Sreeram", "b": "Thanmay", "scoreA": null, "scoreB": null },
-        { "id": "G1-M3", "a": "Badrinath PB", "b": "Siddharth G Iyer", "scoreA": null, "scoreB": null },
-        { "id": "G1-M4", "a": "P S Srinivasan", "b": "HARIDATH P", "scoreA": null, "scoreB": null },
-        { "id": "G1-M5", "a": "Rithul. K", "b": "Advaith Anand", "scoreA": null, "scoreB": null },
-        { "id": "G1-M6", "a": "Sidharth", "b": "ADITHYA", "scoreA": null, "scoreB": null },
-        { "id": "G1-M7", "a": "Viresh Balasubramanian R", "b": "Aayush Vijayan", "scoreA": null, "scoreB": null }
+        {
+          "id": "G1-M1",
+          "a": "Sanchu",
+          "b": "L.Adwaidmuthukrishnan",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M2",
+          "a": "Sreeram",
+          "b": "Thanmay",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M3",
+          "a": "Badrinath PB",
+          "b": "Siddharth G Iyer",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M4",
+          "a": "P S Srinivasan",
+          "b": "HARIDATH P",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M5",
+          "a": "Rithul. K",
+          "b": "Advaith Anand",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M6",
+          "a": "Sidharth",
+          "b": "ADITHYA",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G1-M7",
+          "a": "Viresh Balasubramanian R",
+          "b": "Aayush Vijayan",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     },
     {
       "name": "Round 1 · Group 2",
       "byeNote": "Byes: Sriniketh. S, Subru",
       "matches": [
-        { "id": "G2-M1", "a": "Vaibhav", "b": "Akhilesh", "scoreA": null, "scoreB": null },
-        { "id": "G2-M2", "a": "Sreehari S", "b": "Arjith.A", "scoreA": null, "scoreB": null },
-        { "id": "G2-M3", "a": "Ramjith A", "b": "T. S. Sreehari", "scoreA": null, "scoreB": null },
-        { "id": "G2-M4", "a": "Karthik", "b": "RISHIKESH G", "scoreA": null, "scoreB": null },
-        { "id": "G2-M5", "a": "Rishi Santhosh R", "b": "Navaneeth Krishna", "scoreA": null, "scoreB": null },
-        { "id": "G2-M6", "a": "Rishikesh LNP", "b": "Mrithyunjay ms", "scoreA": null, "scoreB": null }
+        {
+          "id": "G2-M1",
+          "a": "Vaibhav",
+          "b": "Akhilesh",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G2-M2",
+          "a": "Sreehari S",
+          "b": "Arjith.A",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G2-M3",
+          "a": "Ramjith A",
+          "b": "T. S. Sreehari",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G2-M4",
+          "a": "Karthik",
+          "b": "RISHIKESH G",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G2-M5",
+          "a": "Rishi Santhosh R",
+          "b": "Navaneeth Krishna",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "G2-M6",
+          "a": "Rishikesh LNP",
+          "b": "Mrithyunjay ms",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     },
     {
       "name": "Round of 16",
       "matches": [
-        { "id": "R16-M1", "a": "G1-M7", "b": "G2-M4", "scoreA": null, "scoreB": null },
-        { "id": "R16-M2", "a": "G1-M2", "b": "G2-M1", "scoreA": null, "scoreB": null },
-        { "id": "R16-M3", "a": "G1-M5", "b": "Subru", "scoreA": null, "scoreB": null },
-        { "id": "R16-M4", "a": "G1-M4", "b": "G2-M3", "scoreA": null, "scoreB": null },
-        { "id": "R16-M5", "a": "G1-M1", "b": "G2-M2", "scoreA": null, "scoreB": null },
-        { "id": "R16-M6", "a": "G1-M6", "b": "G2-M6", "scoreA": null, "scoreB": null },
-        { "id": "R16-M7", "a": "Rishi Praveen", "b": "G2-M5", "scoreA": null, "scoreB": null },
-        { "id": "R16-M8", "a": "G1-M3", "b": "Sriniketh. S", "scoreA": null, "scoreB": null }
+        {
+          "id": "R16-M1",
+          "a": "G1-M7",
+          "b": "G2-M4",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M2",
+          "a": "G1-M2",
+          "b": "G2-M1",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M3",
+          "a": "G1-M5",
+          "b": "Subru",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M4",
+          "a": "G1-M4",
+          "b": "G2-M3",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M5",
+          "a": "G1-M1",
+          "b": "G2-M2",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M6",
+          "a": "G1-M6",
+          "b": "G2-M6",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M7",
+          "a": "Rishi Praveen",
+          "b": "G2-M5",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "R16-M8",
+          "a": "G1-M3",
+          "b": "Sriniketh. S",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     },
     {
       "name": "Quarterfinals",
       "matches": [
-        { "id": "QF1", "a": "R16-M1", "b": "R16-M2", "scoreA": null, "scoreB": null },
-        { "id": "QF2", "a": "R16-M3", "b": "R16-M4", "scoreA": null, "scoreB": null },
-        { "id": "QF3", "a": "R16-M5", "b": "R16-M6", "scoreA": null, "scoreB": null },
-        { "id": "QF4", "a": "R16-M7", "b": "R16-M8", "scoreA": null, "scoreB": null }
+        {
+          "id": "QF1",
+          "a": "R16-M1",
+          "b": "R16-M2",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "QF2",
+          "a": "R16-M3",
+          "b": "R16-M4",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "QF3",
+          "a": "R16-M5",
+          "b": "R16-M6",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "QF4",
+          "a": "R16-M7",
+          "b": "R16-M8",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     },
     {
       "name": "Semifinals",
       "matches": [
-        { "id": "SF1", "a": "QF1", "b": "QF2", "scoreA": null, "scoreB": null },
-        { "id": "SF2", "a": "QF3", "b": "QF4", "scoreA": null, "scoreB": null }
+        {
+          "id": "SF1",
+          "a": "QF1",
+          "b": "QF2",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "SF2",
+          "a": "QF3",
+          "b": "QF4",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     },
     {
       "name": "Final & 3rd place",
       "matches": [
-        { "id": "FINAL", "a": "SF1", "b": "SF2", "scoreA": null, "scoreB": null },
-        { "id": "3RD-PLACE", "a": "SF1:loser", "b": "SF2:loser", "scoreA": null, "scoreB": null }
+        {
+          "id": "FINAL",
+          "a": "SF1",
+          "b": "SF2",
+          "scoreA": null,
+          "scoreB": null
+        },
+        {
+          "id": "3RD-PLACE",
+          "a": "SF1:loser",
+          "b": "SF2:loser",
+          "scoreA": null,
+          "scoreB": null
+        }
       ]
     }
   ]

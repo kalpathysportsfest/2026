@@ -20,15 +20,15 @@
           "id": "SF1",
           "a": "Ananya Vishwesh",
           "b": "K.S.Lakshana Shree",
-          "scoreA": 15,
-          "scoreB": 11
+          "scoreA": null,
+          "scoreB": null
         },
         {
           "id": "SF2",
           "a": "Shriya Praveen",
           "b": "Aswina KV",
-          "scoreA": 12,
-          "scoreB": 15
+          "scoreA": null,
+          "scoreB": null
         }
       ]
     },
@@ -39,8 +39,8 @@
           "id": "FINAL",
           "a": "SF1",
           "b": "SF2",
-          "scoreA": 15,
-          "scoreB": 8
+          "scoreA": null,
+          "scoreB": null
         }
       ]
     }
